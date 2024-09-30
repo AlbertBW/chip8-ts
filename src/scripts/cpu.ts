@@ -171,7 +171,7 @@ class CPU {
     };
 
     // Initialise a GET request to retrieve the ROM from our roms folder
-    request.open("GET", "/roms/" + romName);
+    request.open("GET", "/chip8-ts/roms/" + romName);
     request.responseType = "arraybuffer";
 
     // Send the GET request
