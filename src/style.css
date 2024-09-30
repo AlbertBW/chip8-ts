@@ -1,0 +1,202 @@
+:root {
+  --crt-green: #00ff33;
+}
+
+html {
+  font-size: 2vmin;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.crt-screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  aspect-ratio: 3 / 4;
+  max-height: 90%;
+  max-width: 90%;
+  background-color: #111;
+  border-radius: 2rem;
+  box-shadow: inset 0px 0px 150px rgba(0, 255, 51, 0.3),
+    /* Inner glow */ 0 0 20px rgba(0, 255, 51, 0.7);
+  transform: perspective(800px) rotateX(6deg);
+  border: 0.3rem solid var(--crt-green);
+  overflow: hidden;
+}
+
+.crt-screen::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4) 2px,
+    transparent 2px,
+    transparent 3px
+  );
+  pointer-events: none;
+}
+
+header {
+  color: var(--crt-green);
+  font-family: "Press Start 2P", cursive;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5vmin;
+  text-shadow: 0 0 2px var(--crt-green),
+    /* Inner glow */ 0 0 2px var(--crt-green),
+    /* Middle glow */ 0 0 4px var(--crt-green),
+    /* Outer glow */ 0 0 4px var(--crt-green),
+    /* Further outer glow */ 0 0 2px var(--crt-green); /* Even further outer glow */
+}
+
+canvas {
+  border: 0.4rem solid var(--crt-green);
+  border-radius: 1rem;
+  max-width: 88%;
+  box-shadow: inset 0px 0px 150px rgba(0, 255, 51, 0.1),
+    /* Inner glow */ 0 0 20px rgba(0, 255, 51, 0.3); /* Outer glow */
+}
+
+.text-section {
+  font-family: "Press Start 2P", cursive;
+  text-shadow: 0 0 1px var(--crt-green),
+    /* Inner glow */ 0 0 1px var(--crt-green),
+    /* Middle glow */ 0 0 1px var(--crt-green),
+    /* Outer glow */ 0 0 1px var(--crt-green),
+    /* Further outer glow */ 0 0 1px var(--crt-green); /* Even further outer glow */
+  line-height: 2rem;
+  margin-top: 0.5rem;
+  width: 91%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  color: var(--crt-green);
+  font-size: 2vmin;
+}
+
+.navigation,
+.information {
+  padding: 0.1rem 0.4rem;
+  margin: 0.1rem;
+  width: 50%;
+  height: 90%;
+  border: 0.3rem solid var(--crt-green);
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: inset 0px 0px 150px rgba(0, 255, 51, 0.1),
+    /* Inner glow */ 0 0 20px rgba(0, 255, 51, 0.2); /* Outer glow */
+}
+
+.information > p {
+  font-size: 1.7vmin;
+  word-spacing: -0.2rem;
+  line-height: 1rem;
+}
+
+.navigation button:hover {
+  text-decoration: underline;
+}
+
+.control-scheme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.key-group {
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.key-group span {
+  border: 0.3vh solid var(--crt-green);
+  color: var(--crt-green);
+  padding: 0vh 0.4vh;
+  border-radius: 0.3vh;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.7vmin;
+  line-height: 1.4rem;
+}
+
+.rom-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rom-list > a {
+  text-decoration: none;
+}
+
+.rom-header,
+.information > h4 {
+  word-spacing: -1.2vmin;
+  text-decoration: underline;
+  margin-top: 0.4vmin;
+  margin-bottom: 0.4vmin;
+  text-align: center;
+}
+
+.rom-item,
+.not-rom-item {
+  padding: 0.2vmin 0.2vmin;
+  color: var(--crt-green);
+  font-family: "Press Start 2P", cursive;
+  cursor: pointer;
+  font-size: 1.7vmin;
+}
+
+.rom-item:hover,
+.not-rom-item:hover {
+  background-color: rgba(0, 255, 51, 0.2);
+  text-decoration: underline;
+}
+
+.file-upload-label {
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.file-upload-input {
+  display: none; /* Hide the actual file input */
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-bottom: 2vh;
+}
+
+footer > a {
+  color: var(--crt-green);
+  padding: 0vh 0.8vh;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.3vmin;
+  text-decoration: none;
+}
+
+footer > a:hover {
+  text-decoration: underline;
+}

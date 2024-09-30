@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/8.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHIP-8 Emulator TS</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div class="crt-screen">
+      <header>
+        <h1>CHIP-8</h1>
+      </header>
+      <canvas></canvas>
+      <div class="text-section">
+        <div class="navigation">
+          <ul class="rom-list">
+            <h4 class="rom-header">Select a game</h4>
+            <li class="rom-item" data-value="snake.ch8">Snake</li>
+            <li class="rom-item" data-value="Space Invaders [David Winter].ch8">
+              Space Invaders
+            </li>
+            <li class="rom-item" data-value="Tetris [Fran Dachille, 1991].ch8">
+              Tetris
+            </li>
+            <li class="rom-item" data-value="Connect 4 [David Winter].ch8">
+              Connect4
+            </li>
+            <li class="rom-item" data-value="Pong.ch8">Pong</li>
+            <li class="rom-item" data-value="flightrunnerch8">Flightrunner</li>
+            <a
+              href="https://github.com/dmatlack/chip8/tree/master/roms"
+              target="_blank"
+              ><li class="not-rom-item">Find More</li></a
+            >
+            <li class="not-rom-item">
+              <label for="file-upload" class="file-upload-label"
+                >Upload ROM</label
+              >
+              <input type="file" id="file-upload" class="file-upload-input" />
+            </li>
+          </ul>
+        </div>
+        <div class="information">
+          <h4 class="info-header">Information</h4>
+          <p>CHIP-8 emulator built in TypeScript</p>
+          <h4>Controls</h4>
+          <div class="control-scheme">
+            <div class="controls">
+              <div class="key-group">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+              </div>
+              <div class="key-group">
+                <span>Q</span>
+                <span>W</span>
+                <span>E</span>
+                <span>R</span>
+              </div>
+              <div class="key-group">
+                <span>A</span>
+                <span>S</span>
+                <span>D</span>
+                <span>F</span>
+              </div>
+              <div class="key-group">
+                <span>Z</span>
+                <span>X</span>
+                <span>C</span>
+                <span>V</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <a href="https://github.com/AlbertBW" target="_blank">Albert Wales</a
+        ><a href="https://github.com/AlbertBW/chip8-ts" target="_blank"
+          >GitHub Repo</a
+        >
+      </footer>
+    </div>
+    <script type="module" src="/src/scripts/chip8.ts"></script>
+  </body>
+</html>
